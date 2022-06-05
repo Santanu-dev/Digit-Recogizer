@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Recognizer</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>Digit Recognizer</h1>
+
+    <div id="main_div" style="width: 100%;">
+        <div id="Lside" style="width: 50%; height: 100%; float: left;"> 
+            <canvas id="canvas"></canvas>
+
+            <div class="BtnStyle">
+                <button class="btn1" id="predictBtn">Recognize</button>
+                <button class="btn2" id="clear">Clear</button>
+            </div>
+
+            <div id="pred">
+                <h6>Guess: None</h6> 
+            </div>
+        </div>
+        <div id="Rside"> 
+            <div class="article">
+                <h4>About</h4>
+                <p class="glowIn">This is an desktop web app for digit recognition. 
+                    Draw a digit on the black canvas and see if it can guess or not!</p>
+                <h4>Graphical Details</h4>
+            </div>    
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"></script>
+    <script src="model.js"></script>
+
+    <div id="pb" class="progress progress-bar progress-bar-striped progress-bar-animated mb-2 mt-2">Loading model</div>
+</body>
+</html>

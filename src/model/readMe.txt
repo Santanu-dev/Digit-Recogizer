@@ -1,0 +1,1 @@
+tensorflowjs_conveter --input_format keras path_to_h5_file path_to_output_dir
